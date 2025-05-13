@@ -5,17 +5,12 @@ import {
   Navbar, //
   Container,
   Nav,
-  Button,
 } from 'react-bootstrap';
-import { signOut } from '../utils/auth';
 
 export default function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Link passHref href="/">
-          <Navbar.Brand>CHANGE ME</Navbar.Brand>
-        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -23,12 +18,12 @@ export default function NavBar() {
             <Link passHref href="/">
               <Nav.Link>Home</Nav.Link>
             </Link>
-            <Link passHref href="/delete-me">
-              <Nav.Link>Delete Me</Nav.Link>
+            <Link passHref href="/projects">
+              <Nav.Link>Projects</Nav.Link>
             </Link>
-            <Button variant="danger" onClick={signOut}>
-              Sign Out
-            </Button>
+            <Link passHref href="/contact">
+              <Nav.Link>Contact Me</Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
