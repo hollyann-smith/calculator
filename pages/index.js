@@ -1,26 +1,58 @@
-import { Button } from 'react-bootstrap';
-import { signOut } from '../utils/auth';
-import { useAuth } from '../utils/context/authContext';
+import { useState } from 'react';
+import NavBar from '../components/NavBar';
+import ProfileCard from '../components/ProfileCard';
+import ResumeCard from '../components/ResumeCard';
+import ContactForm from '../components/forms/ContactForm';
 
 function Home() {
-  const { user } = useAuth();
+  const [activeSection, setActiveSection] = useState(null); // 'about' | 'contact' | null
+
+  const toggleSection = (section) => {
+    setActiveSection((prev) => (prev === section ? null : section));
+  };
+
   return (
-    <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
-      style={{
-        height: '90vh',
-        padding: '30px',
-        maxWidth: '400px',
-        margin: '0 auto',
-      }}
-    >
-      <h1>Hello {user.fbUser.displayName}! </h1>
-      <p>Your Bio: {user.bio}</p>
-      <p>Click the button below to logout!</p>
-      <Button variant="danger" type="button" size="lg" className="copy-btn" onClick={signOut}>
-        Sign Out
-      </Button>
-    </div>
+    <>
+      <div className="navb" style={{ marginBottom: 130 }}>
+        <NavBar />
+      </div>
+      <div
+        className="container"
+        style={{
+          padding: '30px',
+          margin: 'auto',
+        }}
+      >
+        <ProfileCard
+          toggleAbout={() => toggleSection('about')}
+          toggleContact={() => toggleSection('contact')}
+        />
+
+        <div
+          style={{
+            maxHeight: activeSection === 'about' ? '999px' : '0',
+            opacity: activeSection === 'about' ? 1 : 0,
+            overflow: 'hidden',
+            transition: 'max-height 0.4s ease, opacity 0.4s ease',
+            boxShadow: 'none',
+          }}
+        >
+          {activeSection === 'about' && <ResumeCard />}
+        </div>
+
+        <div
+          style={{
+            maxHeight: activeSection === 'contact' ? '500px' : '0',
+            opacity: activeSection === 'contact' ? 1 : 0,
+            overflow: 'hidden',
+            transition: 'max-height 0.4s ease, opacity 0.4s ease',
+            marginTop: '20px',
+          }}
+        >
+          {activeSection === 'contact' && <ContactForm />}
+        </div>
+      </div>
+    </>
   );
 }
 
