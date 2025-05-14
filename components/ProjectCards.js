@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { Image } from 'react-bootstrap';
 
 export default function ProjectCards() {
@@ -18,23 +17,23 @@ export default function ProjectCards() {
             <h5 className="card-title">SparkLab</h5>
             <p className="card-text">A creative activity-sharing platform for parents of young kids. Users can create, save, and explore hands-on ideas based on the supplies they already have.</p>
             <ul>
-              {['React', 'Next.js', 'Firebase Auth', 'PostgreSQL', 'Tailwind CSS', 'Heroku'].map((tech) => (
+              {['React', 'Next.js', 'Firebase Auth', 'PostgreSQL', 'CSS', 'Heroku'].map((tech) => (
                 <li>
                   {tech}
                 </li>
               ))}
             </ul>
             <div className="btn-group">
-              <Link passHref href="https://sparklab.netlify.app" target="_blank">
-                <button className="btn btn-dark" type="button" style={{ marginRight: 8 }}>
+              <a href="https://sparklab.netlify.app" target="_blank" rel="noopener noreferrer">
+                <button className="btn btn-dark" type="button" style={{ marginRight: 18 }}>
                   View Live
                 </button>
-              </Link>
-              <Link passHref href="https://github.com/hollyann-smith/SparkLab-client" target="_blank">
+              </a>
+              <a href="https://github.com/hollyann-smith/SparkLab-client" target="_blank" rel="noopener noreferrer">
                 <button className="btn btn-dark" type="button">
                   View Code
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -53,23 +52,23 @@ export default function ProjectCards() {
             <h5 className="card-title">Gone Fishin’</h5>
             <p className="card-text">A catch-tracking and sharing app for anglers. Users can log fish with photos, leave emoji reactions and comments, and review their catch history.</p>
             <ul>
-              {['Ruby on Rails', 'PostgreSQL', 'Ruby', 'Devise', 'Netlify', 'Bootstrap'].map((tech) => (
+              {['Ruby on Rails', 'PostgreSQL', 'Ruby', 'Devise', 'CSS', 'Bootstrap'].map((tech) => (
                 <li>
                   {tech}
                 </li>
               ))}
             </ul>
             <div className="btn-group">
-              <Link passHref href="https://gonefishin.herokuapp.com" target="_blank">
+              <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer">
                 <button className="btn btn-dark" type="button" style={{ marginRight: 8 }}>
                   View Details
                 </button>
-              </Link>
-              <Link passHref href="https://github.com/hollyann-smith/gone-fishin" target="_blank">
+              </a>
+              <a href="https://github.com/hollyann-smith/fish" target="_blank" rel="noopener noreferrer">
                 <button className="btn btn-dark" type="button">
                   View Code
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -95,16 +94,20 @@ export default function ProjectCards() {
               ))}
             </ul>
             <div className="btn-group">
-              <Link passHref href="https://happyhome.app" target="_blank">
+              <a
+                href="https://happyhomecapstone.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button className="btn btn-dark" type="button" style={{ marginRight: 8 }}>
                   View Live
                 </button>
-              </Link>
-              <Link passHref href="https://github.com/hollyann-smith/happy-home" target="_blank">
+              </a>
+              <a href="https://github.com/hollyann-smith/HappyHomeCapstone" target="_blank" rel="noopener noreferrer">
                 <button className="btn btn-dark" type="button">
                   View Code
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

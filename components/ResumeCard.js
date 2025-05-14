@@ -5,13 +5,13 @@ function ResumeCard() {
     <div
       className="card"
       style={{
-        height: '618px', width: '518px',
+        height: '918px', width: '818px',
       }}
     ><Image
       src="/resume.png"
       alt="resume"
       style={{
-        height: 610, width: 510, borderRadius: 50,
+        height: 910, width: 810, borderRadius: 50,
       }}
     />
     </div>

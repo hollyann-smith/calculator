@@ -28,6 +28,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: auto;
   margin-bottom: 10px;
 }
 .navbar {
@@ -51,6 +52,8 @@ body {
   border-radius: 20px;
   background: var(--bg-color);
   margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .card__img {
@@ -96,10 +99,14 @@ body {
 
 .card-social {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 190px;
   margin-top: 10%;
   text-align: center;
+}
+
+.card__wrapper {
+  border-top: #000 1px solid;
 }
 
 .card-social-icon {
@@ -109,6 +116,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10px;
 }
 
 .card-social-icon svg {
@@ -128,10 +136,15 @@ body {
   margin: 5px;
 }
 
+/* .card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 32px rgba(0, 0, 0, 0.1);
+} */
+
 .btn-group {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 /* From Uiverse.io by DavidTM96 */ 
@@ -220,4 +233,45 @@ body {
 .form-card2:hover {
   transform: scale(0.98);
   border-radius: 20px;
+}
+
+/* From Uiverse.io by WhiteNervosa */ 
+.navbutton {
+  font-size: 18px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.navbutton:focus,
+.navbutton:hover {
+  color: #fff;
+}
+
+.navbutton:focus:after,
+.navbutton:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.navbutton:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }

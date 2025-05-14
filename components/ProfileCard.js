@@ -2,7 +2,7 @@
 /* eslint-disable max-len */
 import { Image } from 'react-bootstrap';
 
-function ProfileCard({ toggleAbout }) {
+function ProfileCard({ toggleAbout, toggleContact }) {
   return (
     <div className="card">
       <div className="card__img" />
@@ -28,6 +28,12 @@ function ProfileCard({ toggleAbout }) {
               <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2m-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11" />
             </svg>
             Resume
+          </li>
+          <li id="cs3" className="card-social-icon" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-file-person-fill" viewBox="0 0 16 16" onClick={toggleContact} label="Resume">
+              <path fillRule="evenodd" d="m3 7.5 3.5 2L8 8.75l1.5.75 3.5-2v-6A1.5 1.5 0 0 0 11.5 0h-7A1.5 1.5 0 0 0 3 1.5zM2 3.133l-.941.502A2 2 0 0 0 0 5.4v.313l2 1.173zm12 3.753 2-1.173V5.4a2 2 0 0 0-1.059-1.765L14 3.133zm-3.693 3.324L16 6.873v6.5zm5.634 4.274L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516M5.693 10.21 0 13.372v-6.5zM8 1.982C9.664.309 13.825 3.236 8 7 2.175 3.236 6.336.31 8 1.982" />
+            </svg>
+            Contact Me
           </li>
           <li id="cs4" className="card-social-icon" type="button">
             <a

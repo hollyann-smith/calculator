@@ -5,7 +5,7 @@ function ProjectPage() {
   return (
     <>
       <NavBar />
-      <div>
+      <div className="container">
         <SparkLabCard />
       </div>
     </>
